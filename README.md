@@ -6,11 +6,11 @@ The environment used for the tests was the following:
 
 1. Virtual Machine KVM su Host Ubuntu 24.04 i7 16GB RAM 30GB qcow virtual disk
 2. Guest Machine
-   - a. Ubuntu 24.04 Kernel 6.17
-   - b. PySpark 4.1.1
-   - c. JVM 17.0.18
-   - d. MariaDB 15.1
-   - e. JDBC connector `mariadb-java-client-3.5.7.jar` da inserire in `$SPARK_HOME/jars/`
+   - Ubuntu 24.04 Kernel 6.17
+   - PySpark 4.1.1
+   - JVM 17.0.18
+   - MariaDB 15.1
+   - JDBC connector `mariadb-java-client-3.5.7.jar` da inserire in `$SPARK_HOME/jars/`
 
 ### Note e modifiche rispetto agli appunti del corso
 
