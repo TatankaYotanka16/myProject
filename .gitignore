@@ -29,6 +29,7 @@ wheels/
 
 # Ignora file di ambiente virtuale (se usi venv)
 venv/
+.venv/
 ENV/
 env/
 
