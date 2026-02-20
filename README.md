@@ -17,4 +17,3 @@ Due to different software version between course (2019) and current available, t
 * JDBC force quote setup: "?sessionVariables=sql_mode='ANSI_QUOTES'" on dbUrl definition to avoid wrong column/data interaction with DB
 * file /etc/hosts redefined host name studentbda from old 127.0.1.1 to 127.0.0.1 to avoid error during pSpark instances of Workers vs Master
 * method readcsv set to true the header identification in order to identify quickly the column names inside the csv files
-* 
