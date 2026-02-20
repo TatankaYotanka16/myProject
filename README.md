@@ -10,11 +10,11 @@ The environment used for the tests was the following:
    - PySpark 4.1.1
    - JVM 17.0.18
    - MariaDB 15.1
-   - JDBC connector `mariadb-java-client-3.5.7.jar` da inserire in `$SPARK_HOME/jars/`
+   - JDBC connector `mariadb-java-client-3.5.7.jar` to place under `$SPARK_HOME/jars/`
 
 ### Note e modifiche rispetto agli appunti del corso
 
-Due to different software version between course (2019) and current available, the following changes were needed:
+Due to different software version between course (2019) and the current available, the following changes were needed:
 
 * JDBC change to allow DB connection: old `jdbc:mysql://` new `jdbc:mariadb://`
 * JDBC force quote setup: `"?sessionVariables=sql_mode='ANSI_QUOTES'"` on dbUrl definition to avoid wrong column/data interaction with DB
