@@ -1,0 +1,11 @@
+log4j:ERROR No appenders could be found for logger (org.apache.hadoop.metrics2.li
+log4j:ERROR Please initialize the log4j system properly.
+log4j:ERROR See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more in
+16/02/25 22:20:12 ERROR General: Plugin (Bundle) "org.datanucleus" is already reg
+16/02/25 22:20:12 ERROR General: Plugin (Bundle) "org.datanucleus.store.rdbms" is
+16/02/25 22:20:12 ERROR General: Plugin (Bundle) "org.datanucleus.api.jdo" is alr
+16/02/25 22:20:13 ERROR Connection: BoneCP specified but not present in CLASSPATH
+16/02/25 22:20:13 ERROR Connection: BoneCP specified but not present in CLASSPATH
+16/02/25 22:20:21 ERROR ObjectStore: Version information not found in metastore.
+16/02/25 22:20:21 ERROR ObjectStore: Failed to get database default, returning No
+16/02/25 22:20:22 ERROR : Your hostname, iMEiL resolves to a loopback/non-reachab

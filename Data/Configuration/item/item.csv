@@ -1,0 +1,11 @@
+itemID,measure,cycleTime
+Aerospace Bracket A,Temperature,120.5
+Aerospace Bracket B,Temperature,115.0
+Hydraulic Valve V1,Pressure,95.0
+Hydraulic Valve V2,Pressure,100.0
+Engine Mount M1,Vibration,85.0
+Engine Mount M2,Vibration,90.0
+Landing Gear Component,Dimension,200.0
+Fuel Pump Assembly,Pressure,150.0
+Control Surface Actuator,Force,175.0
+Navigation Housing,Torque,130.0

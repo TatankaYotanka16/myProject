@@ -1,0 +1,2 @@
+Requirement already satisfied: pyspark in /home/studentbda/myProject/bin/spark/python (4.1.1)
+Requirement already satisfied: py4j<0.10.9.10,>=0.10.9.7 in /home/studentbda/myProject/python/.venv/lib/python3.12/site-packages (from pyspark) (0.10.9.9)

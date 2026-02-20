@@ -1,0 +1,13 @@
+area,areaID,machineClass,machineID,componentClass,componentID,activationTime,deactivationTime,mttf,mtbf,mttr,measure
+Machining,AREA_01,CNC Milling,M001,NA,NA,2024-01-01 08:00:00,,1200.5,1500,45,Temperature
+Machining,AREA_01,CNC Milling,M001,Spindle Motor,C001,2024-01-01 08:00:00,,1200.5,1500,45,Temperature
+Machining,AREA_01,CNC Milling,M001,Cooling System,C002,2024-01-01 08:00:00,,800.0,1000,30,Temperature
+Machining,AREA_01,CNC Milling,M001,Tool Changer,C003,2024-01-01 08:00:00,,900.0,1100,35,Torque
+Assembly,AREA_02,Robotic Arm,M002,NA,NA,2024-01-01 08:00:00,,2000.0,2500,60,Force
+Assembly,AREA_02,Robotic Arm,M002,Servo Motor,R001,2024-01-01 08:00:00,,2000.0,2500,60,Force
+Assembly,AREA_02,Robotic Arm,M002,Gripper,R002,2024-01-01 08:00:00,,1800.0,2200,55,Force
+Material Handling,AREA_03,Conveyor Belt,M003,NA,NA,2024-01-01 08:00:00,,1500.0,1800,40,RPM
+Material Handling,AREA_03,Conveyor Belt,M003,Drive Motor,B001,2024-01-01 08:00:00,,1500.0,1800,40,RPM
+Quality Control,AREA_04,Quality Scanner,M004,NA,NA,2024-01-01 08:00:00,,3000.0,3500,20,Dimension
+Quality Control,AREA_04,Quality Scanner,M004,Camera System,Q001,2024-01-01 08:00:00,,3000.0,3500,20,Dimension
+Quality Control,AREA_04,Quality Scanner,M004,Laser Sensor,Q002,2024-01-01 08:00:00,,3000.0,3500,20,Dimension

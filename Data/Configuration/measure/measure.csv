@@ -1,0 +1,12 @@
+unitID,unit,measure
+TEMP_C,°C,Temperature
+PRES_BAR,bar,Pressure
+VIB_MM_S,mm/s,Vibration
+RPM_VAL,rpm,RPM
+FORCE_N,N,Force
+TORQUE_NM,Nm,Torque
+DIM_MM,mm,Dimension
+ROUGH_MU,μm,Surface Roughness
+CURR_A,A,Current
+VOLT_V,V,Voltage
+HOUR,H,hour

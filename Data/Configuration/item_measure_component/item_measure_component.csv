@@ -1,0 +1,11 @@
+machineID,componentID,itemID,measure,min_value,avg_value,max_value
+M001,C001,Aerospace Bracket A,Temperature,60.0,65.5,70.0
+M001,C001,Aerospace Bracket B,Temperature,62.0,67.0,72.0
+M001,C002,Aerospace Bracket A,Temperature,20.0,22.3,25.0
+M002,R001,Hydraulic Valve V1,Pressure,5.5,6.5,7.5
+M002,R001,Hydraulic Valve V2,Pressure,6.0,7.0,8.0
+M002,R002,Hydraulic Valve V1,Force,1000.0,1250.0,1500.0
+M003,B001,Engine Mount M1,Vibration,1.5,2.1,2.8
+M003,B001,Engine Mount M2,Vibration,1.8,2.5,3.0
+M004,Q001,Landing Gear Component,Dimension,49.98,50.02,50.05
+M004,Q002,Control Surface Actuator,Dimension,100.1,100.5,100.9

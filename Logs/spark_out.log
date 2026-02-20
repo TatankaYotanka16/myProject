@@ -1,0 +1,178 @@
+// Source - https://stackoverflow.com/q/35639159
+// Posted by boplight
+// Retrieved 2026-02-08, License - CC BY-SA 3.0
+
+C:\dev\spark-1.6.0-bin-hadoop2.6\bin>spark-shell
+log4j:ERROR No appenders could be found for logger (org.apache.hadoop.metrics2.li
+b.MutableMetricsFactory).
+log4j:ERROR Please initialize the log4j system properly.
+log4j:ERROR See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more in
+fo.
+Using Spark's repl log4j profile: org/apache/spark/log4j-defaults-repl.propertie
+s
+To adjust logging level use sc.setLogLevel("INFO")
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 1.6.0
+      /_/
+
+Using Scala version 2.10.5 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_73)
+Type in expressions to have them evaluated.
+Type :help for more information.
+Spark context available as sc.
+16/02/25 22:20:12 ERROR General: Plugin (Bundle) "org.datanucleus" is already reg
+istered. Ensure you dont have multiple JAR versions of the same plugin in the cl
+asspath. The URL "file:/C:/dev/spark-1.6.0-bin-hadoop2.6/bin/../lib/datanucleus-
+core-3.2.10.jar" is already registered, and you are trying to register an identi
+cal plugin located at URL "file:/C:/dev/spark-1.6.0-bin-hadoop2.6/lib/datanucleu
+s-core-3.2.10.jar."
+16/02/25 22:20:12 ERROR General: Plugin (Bundle) "org.datanucleus.store.rdbms" is
+ already registered. Ensure you dont have multiple JAR versions of the same plug
+in in the classpath. The URL "file:/C:/dev/spark-1.6.0-bin-hadoop2.6/lib/datanuc
+leus-rdbms-3.2.9.jar" is already registered, and you are trying to register an i
+dentical plugin located at URL "file:/C:/dev/spark-1.6.0-bin-hadoop2.6/bin/../li
+b/datanucleus-rdbms-3.2.9.jar."
+16/02/25 22:20:12 ERROR General: Plugin (Bundle) "org.datanucleus.api.jdo" is alr
+eady registered. Ensure you dont have multiple JAR versions of the same plugin i
+n the classpath. The URL "file:/C:/dev/spark-1.6.0-bin-hadoop2.6/lib/datanucleus
+-api-jdo-3.2.6.jar" is already registered, and you are trying to register an ide
+ntical plugin located at URL "file:/C:/dev/spark-1.6.0-bin-hadoop2.6/bin/../lib/
+datanucleus-api-jdo-3.2.6.jar."
+16/02/25 22:20:13 ERROR Connection: BoneCP specified but not present in CLASSPATH
+ (or one of dependencies)
+16/02/25 22:20:13 ERROR Connection: BoneCP specified but not present in CLASSPATH
+ (or one of dependencies)
+16/02/25 22:20:21 ERROR ObjectStore: Version information not found in metastore.
+hive.metastore.schema.verification is not enabled so recording the schema versio
+n 1.2.0
+16/02/25 22:20:21 ERROR ObjectStore: Failed to get database default, returning No
+SuchObjectException
+16/02/25 22:20:22 ERROR : Your hostname, iMEiL resolves to a loopback/non-reachab
+le address: fe80:0:0:0:19ea:ffe2:e70c:3da7%wlan1, but we couldn't find any exter
+nal IP address!
+java.lang.RuntimeException: java.lang.NullPointerException
+        at org.apache.hadoop.hive.ql.session.SessionState.start(SessionState.jav
+a:522)
+        at org.apache.spark.sql.hive.client.ClientWrapper.<init>(ClientWrapper.s
+cala:194)
+        at org.apache.spark.sql.hive.client.IsolatedClientLoader.createClient(Is
+olatedClientLoader.scala:238)
+        at org.apache.spark.sql.hive.HiveContext.executionHive$lzycompute(HiveCo
+ntext.scala:218)
+        at org.apache.spark.sql.hive.HiveContext.executionHive(HiveContext.scala
+:208)
+        at org.apache.spark.sql.hive.HiveContext.functionRegistry$lzycompute(Hiv
+eContext.scala:462)
+        at org.apache.spark.sql.hive.HiveContext.functionRegistry(HiveContext.sc
+ala:461)
+        at org.apache.spark.sql.UDFRegistration.<init>(UDFRegistration.scala:40)
+
+        at org.apache.spark.sql.SQLContext.<init>(SQLContext.scala:330)
+        at org.apache.spark.sql.hive.HiveContext.<init>(HiveContext.scala:90)
+        at org.apache.spark.sql.hive.HiveContext.<init>(HiveContext.scala:101)
+        at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+
+        at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+
+        at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Sou
+rce)
+        at java.lang.reflect.Constructor.newInstance(Unknown Source)
+        at org.apache.spark.repl.SparkILoop.createSQLContext(SparkILoop.scala:10
+28)
+        at $iwC$$iwC.<init>(<console>:15)
+        at $iwC.<init>(<console>:24)
+        at <init>(<console>:26)
+        at .<init>(<console>:30)
+        at .<clinit>(<console>)
+        at .<init>(<console>:7)
+        at .<clinit>(<console>)
+        at $print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:
+1065)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:
+1346)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:840
+)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:871)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:819)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:8
+57)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.sca
+la:902)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:814)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply
+(SparkILoopInit.scala:132)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply
+(SparkILoopInit.scala:124)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:324)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoop
+Init.scala:124)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:64)
+
+        at org.apache.spark.repl.SparkILoop$$anonfun$org$apache$spark$repl$Spark
+ILoop$$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:974)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.s
+cala:159)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:64)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkIL
+oopInit.scala:108)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:
+64)
+        at org.apache.spark.repl.SparkILoop$$anonfun$org$apache$spark$repl$Spark
+ILoop$$process$1.apply$mcZ$sp(SparkILoop.scala:991)
+        at org.apache.spark.repl.SparkILoop$$anonfun$org$apache$spark$repl$Spark
+ILoop$$process$1.apply(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoop$$anonfun$org$apache$spark$repl$Spark
+ILoop$$process$1.apply(SparkILoop.scala:945)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClass
+Loader.scala:135)
+        at org.apache.spark.repl.SparkILoop.org$apache$spark$repl$SparkILoop$$pr
+ocess(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1059)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSub
+mit$$runMain(SparkSubmit.scala:731)
+        at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:18
+1)
+        at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.lang.NullPointerException
+        at java.lang.ProcessBuilder.start(Unknown Source)
+        at org.apache.hadoop.util.Shell.runCommand(Shell.java:482)
+        at org.apache.hadoop.util.Shell.run(Shell.java:455)
+        at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:
+715)
+        at org.apache.hadoop.util.Shell.execCommand(Shell.java:808)
+        at org.apache.hadoop.util.Shell.execCommand(Shell.java:791)
+        at org.apache.hadoop.fs.FileUtil.execCommand(FileUtil.java:1097)
+        at org.apache.hadoop.fs.RawLocalFileSystem$DeprecatedRawLocalFileStatus.
+loadPermissionInfo(RawLocalFileSystem.java:582)
+        at org.apache.hadoop.fs.RawLocalFileSystem$DeprecatedRawLocalFileStatus.
+getPermission(RawLocalFileSystem.java:557)
+        at org.apache.hadoop.hive.ql.session.SessionState.createRootHDFSDir(Sess
+ionState.java:599)
+        at org.apache.hadoop.hive.ql.session.SessionState.createSessionDirs(Sess
+ionState.java:554)
+        at org.apache.hadoop.hive.ql.session.SessionState.start(SessionState.jav
+a:508)
+        ... 62 more
+
+<console>:16: error: not found: value sqlContext
+         import sqlContext.implicits._
+                ^
+<console>:16: error: not found: value sqlContext
+         import sqlContext.sql
+                ^
+

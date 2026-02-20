@@ -1,0 +1,62 @@
+# This script launch:
+# - a python program
+# - Spark Standalone cluster (Local cluster)
+# - a pyspark program in client mode
+
+# this script needs to be made executable before launching
+# if it will be run from its own directory
+# the command: ./script1.sh
+# alternatevely: /home/studentbda/myProject/scripts/script1.sh
+
+root="/home/studentbda/myProject"
+scriptDir=$root"/python/scripts"
+pythonDir=$root"/python/modules"
+checkDir=$root"/Checkpoint"
+log1=$root"/Logs/Streaming_Socket_Client.log"
+
+host="spark://127.0.0.1:7077"
+
+echo "#------------------------------#"
+echo "#     start script script1     #"
+echo "#------------------------------#"
+
+dayTime=$(date +"%Y-%m-%d-%T")
+echo "current system dayTime is "$dayTime
+
+#  ask user to indicate whether he wants to stop and restart
+#  spark master and workers
+read -p "Do you want to stop and restart spark master/slaves session ? : (yes / no) > " ans1
+
+if [ $ans1 == "yes" ]; then
+
+	# stopping pre existing spark sessions
+	$SPARK_HOME"/sbin/stop-master.sh"
+	$SPARK_HOME"/sbin/stop-worker.sh"
+
+	# launching new spark session
+	$SPARK_HOME"/sbin/start-master.sh" 
+	$SPARK_HOME"/sbin/start-worker.sh"  $host
+fi
+
+#  ask user to indicate whether he want
+#  to run socket client python program
+read -p "Would you like to run socket client ? : (yes / no) > " ans2
+
+if [ $ans2 == "yes" ]; then
+		# remove all the checkpoint files
+		# THIS IS MANDATORY for Spark Streaming
+		cd $checkDir
+		rm -rf measurements
+		# run python socket server
+		python3 $pythonDir"/Server.py" &
+		# run pyspark socket client
+        $SPARK_HOME"/bin/spark-submit" --master $host \
+				$pythonDir"/Streaming_Socket_Client.py" \
+                > $log1 &
+fi
+
+cd $scriptDir
+
+echo "#------------------------------#"
+echo "#       end script script1     #"
+echo "#------------------------------#"

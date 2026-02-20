@@ -1,0 +1,9 @@
+# requirements.txt
+# this file lists packages' you need to install by pip3 under python dir.
+# location dir = /home/studentbda/myProject/python/
+# list of packages
+pandas==0.24.2
+# Numpy is installed togheter with PAndas
+scipy==1.2.1
+networkX==2.2
+matplotlib==3.0.3
